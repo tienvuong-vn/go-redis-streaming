@@ -56,14 +56,14 @@ Library:
 # SSE STREAMING
 - /streaming/:path/:channel : get sse streaming by path and channel
 - Example:
-    - /streaming/price/anz.asx,bhp.asx -> recieve data from redis pub/sub: price:anz.asx and price:bhp.asx
-    - /streaming/account/anz.asx,bhp.asx -> recieve data from redis pub/sub: account:anz.asx and account:bhp.asx
+    - /streaming/price/AAPL,IBM -> recieve data from redis pub/sub: price:AAPL and price:IBM
+    - /streaming/account/AAPL,IBM -> recieve data from redis pub/sub: account:AAPL and account:IBM
 
 # WS STREAMING
 - /ws-streaming/:path/:channel : get sse streaming by path and channel
 - Example:
-    - /ws-streaming/price/anz.asx,bhp.asx -> recieve data from redis pub/sub: price:anz.asx and price:bhp.asx
-    - /ws-streaming/account/anz.asx,bhp.asx -> recieve data from redis pub/sub: account:anz.asx  and account:bhp.asx
+    - /ws-streaming/price/AAPL,IBM -> recieve data from redis pub/sub: price:AAPL and price:IBM
+    - /ws-streaming/account/AAPL,IBM -> recieve data from redis pub/sub: account:AAPL  and account:IBM
 
 
 # TESTING
@@ -73,10 +73,10 @@ npm install -g wscat
 ```
 - Run Websocket on terminal
 ```
-wscat -c wss://localhost:8080/ws-streaming/price/anz.asx,bhp.asx
+wscat -c wss://localhost:8080/ws-streaming/price/AAPL,IBM
 ```
 
 - Run Curl SSE on terminal 
 ```
-curl http://localhost:8080/streaming/price/anz.asx,bhp.asx
+curl http://localhost:8080/streaming/price/AAPL,IBM
 ```
