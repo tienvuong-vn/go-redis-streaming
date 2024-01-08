@@ -27,7 +27,7 @@ Library:
 ```
 
 # MODEL
-[PROCESSING] -> [REDIS PUB/SUB] -> [STREAMING] -> [CLIENT]
+[PROCESSING] -> [REDIS PUB/SUB] -> [GO-REDIS-STREAMING] -> [CLIENT]
 
 # CONFIG
 - port: port streaming service listener
